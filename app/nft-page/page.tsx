@@ -51,7 +51,7 @@ const Page = () => {
             <span>The Orbitians is a collection of 10,000 unique NFTs on the Ethereum blockchain</span>
             <span>There are all sorts of beings in the NFT Universe. The most advanced and friendly of the bunch are Orbitians.</span>
             <span>They live in a metal space machines, high up in the sky and only have one foot on Earth.
-              These Orbitians are a peaceful race, but they have been at war with a group of invaders for many generations. The invaders are called Upside-Downs, because of their inverted bodies that live on the ground, yet do not know any other way to be. Upside-Downs believe that they will be able to win this war if they could only get an eye into Orbitian territory, so they've taken to make human beings their target.</span>
+              These Orbitians are a peaceful race, but they have been at war with a group of invaders for many generations. The invaders are called Upside-Downs, because of their inverted bodies that live on the ground, yet do not know any other way to be. Upside-Downs believe that they will be able to win this war if they could only get an eye into Orbitian territory, so they&apos;ve taken to make human beings their target.</span>
           </div>
           <div className="flex flex-col gap-3">
             <span className="text-zinc-500">Details</span>
@@ -84,17 +84,39 @@ const Page = () => {
         <div className="relative mb-10 xl:mb-20">
           <h2 className="text-subtitleSec md:text-subtitle mb-[30px]">Discover More NFTs</h2>
           <div className="flex flex-col gap-8 md:flex-row">
-            <NftCard />
-            <NftCard />
-            <NftCard />
+            <NftCard
+              id="string"
+              text="string"
+              img="string"
+              icon="string"
+              imgAlt="string"
+              iconAlt="string"
+              href="string"
+            /><NftCard
+              id="string"
+              text="string"
+              img="string"
+              icon="string"
+              imgAlt="string"
+              iconAlt="string"
+              href="string"
+            /><NftCard
+              id="string"
+              text="string"
+              img="string"
+              icon="string"
+              imgAlt="string"
+              iconAlt="string"
+              href="string"
+            />
           </div>
           <div className="h-[60px] w-[100%] mt-10 md:-mt-2 md:w-[244px] md:absolute top-0 right-0 border border-purple-500 rounded-[20px]">
             <MyButton
-              href='/rankings'
-              iconSrc='/images/icons/Eye-blue.png'
-              alt='rocket icon'
-              text='See All'
-              bg='transparent'
+              href="/rankings"
+              iconSrc="/images/icons/Eye-blue.png"
+              alt="rocket icon"
+              text="See All"
+              bg="transparent"
             />
           </div>
         </div>

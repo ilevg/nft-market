@@ -1,7 +1,4 @@
 "use client"
-import CollectionCard from "@/components/common/CollectionsCard"
-import NftCard from "@/components/common/NftCard"
-import Image from "next/image"
 import React, { useState } from "react"
 import CreatorsInfoCard from "./components/CreatorsInfoCard"
 

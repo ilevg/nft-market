@@ -17,7 +17,7 @@ const Header = () => {
       document.body.classList.remove("overflow-hidden");
       document.body.classList.remove("pr-4");
     }
-  }, [menuOpen]);
+  }, [menuOpen, screenWidth]);
 
   const burgeerMenuToggle = () => {
     setMenuOpen(!menuOpen);

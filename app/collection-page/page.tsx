@@ -76,18 +76,103 @@ const Page = () => {
           <span className="border-b border-zinc-500 w-full absolute left-0 bottom-0 mt-10 md:mt-[60px] xl:mt-20"></span>
         </div>
         <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2 xl:grid-cols-3 my-10 md:my-[60px]">
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
-          <NftCard />
+          <NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          /><NftCard
+            id='string'
+            text='string'
+            img='string'
+            icon='string'
+            imgAlt='string'
+            iconAlt='string'
+            href='string'
+          />
         </div>
       </div>
     </div>
