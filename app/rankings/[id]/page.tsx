@@ -144,6 +144,7 @@ const Page = ({ params }: { params: { id: number } }) => {
               {
                 createdNfts.map(nft => (
                   <NftCard
+                    key={nft.id}
                     id={nft.id}
                     name={singleAuthor?.name}
                     author={nft.author}

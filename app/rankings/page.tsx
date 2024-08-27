@@ -30,7 +30,7 @@ const Page = () => {
     }
   };
 
-  const sortedAuthors = useMemo(() => sortAuthors(activeTab), [authors, activeTab]);
+  const sortedAuthors = useMemo(() => sortAuthors(activeTab), [authors, activeTab, sortAuthors]);
 
   return (
     <div className=" text-white w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px mx-auto mb-10 px-5 md:px-0 bg-bg">

@@ -122,6 +122,7 @@ const Page = () => {
                   return item.main_img
                 })
                 return <CollectionCard
+                  key={name + index}
                   collectionName={name}
                   image_1={arr[0]}
                   image_2={arr[1]}
