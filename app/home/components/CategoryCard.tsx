@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { categorySectionData } from "../data"
+import Link from "next/link"
 
 interface CategoryCard {
     id: string
@@ -12,14 +13,14 @@ interface CategoryCard {
 }
 const CategoryCard: React.FC<CategoryCard> = ({ id, text, img, icon, imgAlt, iconAlt, href }) => {
     return (
-        <div id={id} className="w-[100%] m-auto">
+        <Link href={'/marketplace'} id={id} className="w-[100%] m-auto shadow-for-box rounded-[20px] block">
             <div className="w-full  h-auto relative">
                 <Image
                     src={img}
                     alt={imgAlt}
                     width={150}
                     height={150}
-                    className=" flex w-full h-auto rounded-t-[20px] blur-sm"
+                    className=" flex w-full h-auto blur-sm"
                 />
                 <Image
                     src={icon}
@@ -33,8 +34,7 @@ const CategoryCard: React.FC<CategoryCard> = ({ id, text, img, icon, imgAlt, ico
             <div className="bg-neutral-700 rounded-b-[20px] w-full h-[68px] xl:h-[76px] flex items-center">
                 <span className="ml-4">{text}</span>
             </div>
-        </div>
-
+        </Link>
     )
 }
 

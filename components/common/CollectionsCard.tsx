@@ -1,10 +1,21 @@
 import Image from "next/image"
+import Link from "next/link"
 
-const CollectionsCard = () => {
+interface CollectionsCardProps {
+    collectionName: string
+    image_1: string
+    image_2?: string
+    image_3?: string
+    nftsQuantity: number
+    authorIcon: string
+    author: string
+}
+
+const CollectionsCard: React.FC<CollectionsCardProps> = ({ collectionName, image_1, image_2, image_3, nftsQuantity, authorIcon, author }) => {
     return (
-        <div className="w-[100%] md:w-[330px]">
+        <Link href={`/marketplace/collections/${collectionName}`} className="block w-[100%] md:w-[330px] shadow-for-box rounded-[20px] p-1">
             <Image
-                src="/images/main-page-img/AnyConv.com__Image Placeholder.webp"
+                src={`/images/nft-card-img/${image_1}`}
                 alt="Storefront"
                 width={315}
                 height={315}
@@ -12,35 +23,35 @@ const CollectionsCard = () => {
             />
             <div className="flex gap-4">
                 <Image
-                    src="/images/main-page-img/AnyConv.com__Image Placeholder.webp"
+                    src={`/images/nft-card-img/${image_2}`}
                     alt="Storefront"
                     width={40}
                     height={40}
                     className="w-full rounded-[20px]"
                 />
                 <Image
-                    src="/images/main-page-img/AnyConv.com__Image Placeholder.webp"
+                    src={`/images/nft-card-img/${image_3}`}
                     alt="Storefront"
                     width={40}
                     height={40}
                     className="w-full rounded-[20px]"
                 />
-                <div className="w-full rounded-[20px] bg-purple-500 flex justify-center items-center">212+</div>
+                <div className="w-full rounded-[20px] bg-purple-500 flex justify-center items-center">{nftsQuantity}+</div>
             </div>
             <div className="h-24 flex flex-col justify-center gap-2 pl-4">
-                <span className="text-textBig">Space Walking</span>
+                <span className="text-textBig ">{collectionName}</span>
                 <div className="flex gap-2">
                     <Image
-                        src="/images/main-page-img/AnyConv.com__Image Placeholder.webp"
+                        src={`/images/user-avatars/${authorIcon}`}
                         alt="Storefront"
                         width={24}
                         height={24}
                         className="rounded-full"
                     />
-                    <span>Animakid</span>
+                    <span className="shadow-for-text">{author}</span>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

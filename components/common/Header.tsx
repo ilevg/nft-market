@@ -25,12 +25,11 @@ const Header = () => {
 
   function handleButton() {
     setMenuOpen(!menuOpen);
-    console.log("sda");
   }
 
   return (
     <div className="flex justify-between items-center h-[54px] md:h-[100px]  px-5 md:px-[50px] bg-zinc-800 relative z-40">
-      <Link href="/">
+      <Link href="/" className="shadow-for-text">
         <div className="flex items-center">
           <Image
             src="/images/icons/Storefront-pink.webp"
@@ -39,7 +38,7 @@ const Header = () => {
             height={24}
             className="md:w-[32px] md:h-[32px]  mr-2"
           />
-          <span className="text-[20px] md:text-xl font-bold text-white">
+          <span className=" text-[20px] md:text-xl font-bold text-white">
             NFT Marketplace
           </span>
         </div>
@@ -51,7 +50,7 @@ const Header = () => {
         <span className="block w-4 h-[1.5px] bg-white rounded-full md:hidden"></span>
       </button>
       <div
-        className={`fixed top-0 right-0 ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} transition-[transform, opacity] duration-700 w-full h-full py-36 bg-black flex flex-col items-center gap-5 text-white md:flex-row md:relative md:py-0 md:translate-x-0 md:bg-transparent md:opacity-100 md:w-auto md:h-auto z-50`}
+        className={` fixed top-0 right-0 ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} transition-[transform, opacity] duration-700 w-full h-full py-36 bg-black flex flex-col items-center gap-5 text-white md:flex-row md:relative md:py-0 md:translate-x-0 md:bg-transparent md:opacity-100 md:w-auto md:h-auto z-50`}
       >
         <button
           type="button"
@@ -61,13 +60,13 @@ const Header = () => {
           <span className="block w-5 h-[1.5px] bg-white rounded-full md:hidden rotate-45  -translate-x-1/2 translate-y-1/2"></span>
           <span className="block w-5 h-[1.5px] bg-white rounded-full md:hidden -rotate-45 -translate-x-1/2 -translate-y-1/2"></span>
         </button>
-        <Link onClick={burgeerMenuToggle} href="/marketplace">
+        <Link onClick={burgeerMenuToggle} href="/marketplace" className="shadow-for-text">
           Marketplace
         </Link>
-        <Link onClick={burgeerMenuToggle} href="/rankings">
+        <Link onClick={burgeerMenuToggle} href="/rankings" className="shadow-for-text">
           Rankings
         </Link>
-        <Link onClick={burgeerMenuToggle} href="/wallet">
+        <Link onClick={burgeerMenuToggle} href="/wallet" className="shadow-for-text">
           Connect a wallet
         </Link>
         <div className="h-[60px] w-[152px]">
@@ -84,7 +83,7 @@ const Header = () => {
 
         <Image
           className="absolute bottom-10 right-10 h-auto w-auto object-cover blur-[2px] md:hidden"
-          src="/images/nft-card-img/Image-12.webp"
+          src="/images/nft-card-img/nft-12.png"
           alt="mashroom"
           width={150}
           height={150}

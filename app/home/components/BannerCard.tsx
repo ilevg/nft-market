@@ -1,10 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const BannerCard = () => {
     return (
-        <div className="md:w-[50%]">
+        <Link href={'/marketplace'} className="md:w-[50%] block shadow-for-box rounded-[20px]">
             <Image
-                src="/images/main-page-img/AnyConv.com__Image Placeholder.webp"
+                src="/images/main-page-img/banner-img.png"
                 alt="Storefront"
                 width={400}
                 height={400}
@@ -14,7 +15,7 @@ const BannerCard = () => {
                 <span className="text-textBig">Space Walking</span>
                 <div className="flex gap-2">
                     <Image
-                        src="/images/main-page-img/AnyConv.com__Image Placeholder.webp"
+                        src="/images/main-page-img/cosmo.png"
                         alt="Storefront"
                         width={24}
                         height={24}
@@ -23,7 +24,7 @@ const BannerCard = () => {
                     <span>Animakid</span>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

@@ -31,7 +31,7 @@ const MyButton: React.FC<ButtonProps> = ({
         backgroundColor: bg,
         color: color
       }}
-      className={`flex justify-center items-center  rounded-[20px]`}
+      className={`flex justify-center items-center  rounded-[20px] shadow-for-box`}
     >
       {iconSrc && alt && (
         <Image
