@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-neutral-700 py-[40px]">
       <div className=" text-stone-300 flex flex-col gap-7 xl:flex-row xl:justify-between w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px] my-0 mx-auto px-5 md:px-0" >
         <div className="flex flex-col gap-5">
-          <Link href="/" className=" mb-3 shadow-for-text">
+          <Link href="/" className=" mb-3 shadow-for-text w-fit">
             <div className="flex items-center">
               <Image
                 src="/images/icons/Storefront-pink.webp"

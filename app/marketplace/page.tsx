@@ -5,7 +5,7 @@ import Pagination from "@/components/common/Pagination"
 import { useCollections } from "@/context"
 import { useFetchData } from "@/hooks/useFetchData"
 import Image from "next/image"
-import React, { useContext, useEffect, useState } from "react"
+import React, { useCallback, useContext, useEffect, useState } from "react"
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState('nfts')
@@ -20,7 +20,7 @@ const Page = () => {
     ? (searchedNftQuery.length ? nfts.filter(nft => nft.name.match(searchedNftQuery)) : nfts)
     : (searchedNftQuery.length ? collectionsArr.filter(coll => coll[0].match(searchedNftQuery)) : collectionsArr)
 
-  const activeTabTogglle = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const activeTabTogglle = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const tabText = e.currentTarget.textContent?.toLowerCase()
     if (tabText === 'nfts') {
       setActiveTab(tabText || 'nfts')
@@ -29,7 +29,7 @@ const Page = () => {
       setActiveTab(tabText || 'collections')
       setSearchedNftQuery('')
     }
-  }
+  }, [activeTab])
 
   // pagination
   const nftsPerPage = 12

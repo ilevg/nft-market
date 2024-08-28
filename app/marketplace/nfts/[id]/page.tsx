@@ -52,7 +52,7 @@ const Page = ({ params }: { params: { id: number } }) => {
               <span className="text-zinc-500">Created By</span>
               <div className="flex">
                 <Image
-                  src={`/images/user-avatars/${singleNfts?.author_icon}`}
+                  src={`/images/user-avatars/${singleNfts && singleNfts.author_icon}`}
                   alt="Storefront"
                   width={24}
                   height={24}

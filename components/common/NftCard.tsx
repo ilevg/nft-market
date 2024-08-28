@@ -35,7 +35,7 @@ const NftCard: React.FC<NftCard> = ({ id, name, author, price, bid, img, icon, i
                             alt={iconAlt}
                             width={24}
                             height={24}
-                            className="rounded-full"
+                            className="rounded-full w-auto h-auto"
                         />
                         <span className="shadow-for-text">{author}</span>
                     </div>

@@ -13,7 +13,7 @@ interface CollectionsCardProps {
 
 const CollectionsCard: React.FC<CollectionsCardProps> = ({ collectionName, image_1, image_2, image_3, nftsQuantity, authorIcon, author }) => {
     return (
-        <Link href={`/marketplace/collections/${collectionName}`} className="block w-[100%] md:w-[330px] shadow-for-box rounded-[20px] p-1">
+        <Link href={`/marketplace/collections/${collectionName}`} className="block w-[100%] shadow-for-box rounded-[20px] p-1">
             <Image
                 src={`/images/nft-card-img/${image_1}`}
                 alt="Storefront"

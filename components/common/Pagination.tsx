@@ -24,7 +24,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalItems, itemsP
                     className="shadow-for-box cursor-pointer h-20 w-[46px] border rounded-[5px]"
                     key={index}
                     onClick={() => onPageChange(index + 1)}
-                    style={{ backgroundColor: currentPage === index + 1 ? 'rgba(57,255,20,0.9)' : 'transparent' }}
+                    style={{ background: currentPage === index + 1 ? 'linear-gradient(45deg, #39ff14 50%, #A259FF 80%)' : 'transparent' }}
                 >
                     {index + 1}
                 </button>

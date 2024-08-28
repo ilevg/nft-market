@@ -76,7 +76,7 @@ const Page = ({ params }: { params: { id: number } }) => {
                   src="/images/icons/DiscordLogo.webp"
                   alt="discord"
                   width={24}
-                  height={32}
+                  height={24}
                 />
 
               </Link>
@@ -165,7 +165,6 @@ const Page = ({ params }: { params: { id: number } }) => {
                 filteredCollections.map(([name, nft], index) => {
 
                   const typedNft = nft as { main_img: string; author_icon: string; author: string }[]
-                  console.log(nft)
                   let nftsQuantity = 0
                   const arr = typedNft.map((item) => {
                     nftsQuantity++

@@ -12,10 +12,8 @@ const Header = () => {
   useEffect(() => {
     if (menuOpen && screenWidth && screenWidth < 834) {
       document.body.classList.add("overflow-hidden");
-      document.body.classList.add("pr-4");
     } else {
       document.body.classList.remove("overflow-hidden");
-      document.body.classList.remove("pr-4");
     }
   }, [menuOpen, screenWidth]);
 
@@ -50,7 +48,7 @@ const Header = () => {
         <span className="block w-4 h-[1.5px] bg-white rounded-full md:hidden"></span>
       </button>
       <div
-        className={` fixed top-0 right-0 ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} transition-[transform, opacity] duration-700 w-full h-full py-36 bg-black flex flex-col items-center gap-5 text-white md:flex-row md:relative md:py-0 md:translate-x-0 md:bg-transparent md:opacity-100 md:w-auto md:h-auto z-50`}
+        className={`fixed top-0 right-0 ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} transition-[transform, opacity] duration-700 w-full h-full py-36 bg-black flex flex-col items-center gap-5 text-white md:flex-row md:relative md:py-0 md:translate-x-0 md:bg-transparent md:opacity-100 md:w-auto md:h-auto z-50`}
       >
         <button
           type="button"
@@ -82,11 +80,11 @@ const Header = () => {
 
 
         <Image
-          className="absolute bottom-10 right-10 h-auto w-auto object-cover blur-[2px] md:hidden"
-          src="/images/nft-card-img/nft-12.png"
+          className="absolute bottom-10 right-10 h-auto w-auto object-cover blur-[2px] md:hidden "
+          src="/images/nft-card-img/nft-31.png"
           alt="mashroom"
-          width={150}
-          height={150}
+          width={120}
+          height={120}
         />
       </div>
     </div>
