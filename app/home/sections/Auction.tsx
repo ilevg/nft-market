@@ -30,7 +30,7 @@ const Auction = () => {
 
                     <div className="h-[60px] w-full md:w-[200px]">
                         <MyButton
-                            href="/marketplace"
+                            href="/marketplace/nfts/28"
                             iconSrc="/images/icons/Eye-blue.png"
                             alt="Eye"
                             text="See NFT"
