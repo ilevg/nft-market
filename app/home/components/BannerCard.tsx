@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const BannerCard = () => {
     return (
-        <Link href={'/marketplace'} className="md:w-[50%] block shadow-for-box rounded-[20px]">
+        <Link href={'/marketplace/nft/30'} className="md:w-[50%] block shadow-for-box rounded-[20px]">
             <Image
                 src="/images/main-page-img/banner-img.png"
                 alt="Storefront"
@@ -12,16 +12,16 @@ const BannerCard = () => {
                 className="w-full rounded-t-[20px]"
             />
             <div className="bg-neutral-700 rounded-b-[20px] h-24 flex flex-col justify-center gap-2 pl-4">
-                <span className="text-textBig">Space Walking</span>
+                <span className="text-textBig">Cool Fox</span>
                 <div className="flex gap-2">
                     <Image
-                        src="/images/main-page-img/cosmo.png"
+                        src="/images/user-avatars/avatar-18.png"
                         alt="Storefront"
                         width={24}
                         height={24}
                         className="rounded-full"
                     />
-                    <span>Animakid</span>
+                    <span>Mr. Fox</span>
                 </div>
             </div>
         </Link>

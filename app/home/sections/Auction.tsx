@@ -13,13 +13,13 @@ const Auction = () => {
                     <div className="bg-neutral-700 w-[150px] h-[45px] rounded-[20px] flex flex-col justify-center gap-2 pl-4">
                         <div className="flex gap-3">
                             <Image
-                                src="/images/main-page-img/cosmo.png"
+                                src="/images/user-avatars/avatar-11.png"
                                 alt="Storefront"
                                 width={24}
                                 height={24}
                                 className="rounded-full"
                             />
-                            <span>Animakid</span>
+                            <span>Shroomie</span>
                         </div>
                     </div>
                     <h1 className="text-subtitle">Magic Mashrooms</h1>
