@@ -6,7 +6,7 @@ import bcrypt from "bcrypt";
 
 const prisma = new PrismaClient();
 
-export default NextAuth({
+const authHandler = NextAuth({
   providers: [
     CredentialsProvider({
       credentials: {
@@ -26,7 +26,7 @@ export default NextAuth({
           user &&
           (await bcrypt.compare(credentials.password, user.password))
         ) {
-          return { ...user, id: user.id }; // Убедитесь, что id возвращается из authorize
+          return { ...user, id: user.id }; // Возвращаем пользователя с id
         } else {
           throw new Error("Invalid credentials");
         }
@@ -41,14 +41,24 @@ export default NextAuth({
     verifyRequest: "/auth/verify-request",
   },
   session: {
-    strategy: "jwt",
+    strategy: "jwt", // Использование JWT для сессий
   },
   callbacks: {
     async session({ session, user }) {
       if (session.user) {
-        session.user.id = user.id as string;
+        session.user.id = user.id as string; // Добавляем id в сессию
       }
       return session;
     },
   },
 });
+
+export async function GET(request: Request) {
+  // Обработка GET-запросов, если это необходимо
+  return new Response("GET requests not handled");
+}
+
+export async function POST(request: Request) {
+  // Обработка POST-запросов для NextAuth
+  return authHandler(request);
+}
