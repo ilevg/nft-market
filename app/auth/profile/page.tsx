@@ -1,6 +1,6 @@
 import React from 'react'
 interface ProfileProps {
-    name: string
+    name?: string
 }
 const Page: React.FC<ProfileProps> = ({ name = 'User' }) => {
     return (
