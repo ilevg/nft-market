@@ -1,8 +1,10 @@
+"use client"
 import MyButton from '@/components/common/MyButton'
 import Image from 'next/image'
 import React from 'react'
+import { signIn } from 'next-auth/react'  // Импортируем хук signIn
 
-const page = () => {
+const Page = () => {
     return (
         <div className='mx-5 md:mx-0 md:pr-20 mb-10 md:grid md:grid-cols-2 md:gap-10 items-center'>
             <Image
@@ -29,12 +31,13 @@ const page = () => {
 
             <div className='flex flex-col gap-[30px] text-white w-full md:max-w-[460px]'>
                 <h2 className='text-subtitle'>Create account</h2>
-                <span>Welcome! enter your details and start creating, collecting and selling NFTs.</span>
+                <span>Welcome! Enter your details and start creating, collecting, and selling NFTs.</span>
+
                 <form action="" className='flex flex-col gap-[15px]'>
-                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="text" name="" id="username" placeholder='Username' />
-                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="email" name="" id="email" placeholder='Email Address' />
-                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="password" name="" id="pass" placeholder='Password' />
-                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="password" name="" id="repeatPass" placeholder='Confirm Password' />
+                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="text" name="username" id="username" placeholder='Username' />
+                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="email" name="email" id="email" placeholder='Email Address' />
+                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="password" name="pass" id="pass" placeholder='Password' />
+                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="password" name="repeatPass" id="repeatPass" placeholder='Confirm Password' />
 
                     <div className="w-full h-[45px] mx-auto md:mx-0">
                         <MyButton
@@ -47,8 +50,7 @@ const page = () => {
                 </form>
             </div>
         </div>
-
     )
 }
 
-export default page
+export default Page

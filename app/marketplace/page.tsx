@@ -25,9 +25,11 @@ const Page = () => {
     if (tabText === 'nfts') {
       setActiveTab(tabText || 'nfts')
       setSearchedNftQuery('')
+      setCurrentPage(1)
     } else if (tabText === 'collections') {
       setActiveTab(tabText || 'collections')
       setSearchedNftQuery('')
+      setCurrentPage(1)
     }
   }, [activeTab])
 
@@ -39,6 +41,10 @@ const Page = () => {
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 
   return (

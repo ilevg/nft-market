@@ -45,7 +45,7 @@ const page = () => {
                         <MyButton
                             href="https://walletconnect.com/"
                             text="Wallet Connect"
-                            iconSrc={"/images/icons/walletconnect.webp"}
+                            iconSrc={"/images/icons/WalletConnect.webp"}
                             alt={"icon"}
                             bg="#3B3B3B"
                             color="#FFFFFF"
@@ -55,7 +55,7 @@ const page = () => {
                         <MyButton
                             href="https://www.coinbase.com/"
                             text="Coinbase"
-                            iconSrc={"/images/icons/coinbase.webp"}
+                            iconSrc={"/images/icons/Coinbase.webp"}
                             alt={"icon"}
                             bg="#3B3B3B"
                             color="#FFFFFF"
