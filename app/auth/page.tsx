@@ -84,7 +84,7 @@ const Page = () => {
 
                 <div className="">
                     <span>Do You have an account?</span>
-                    <Link href="http://localhost:3000/auth/register" className='text-[#A259FF] ml-3 shadow-for-text'>Sing up</Link>
+                    <Link href="/auth/register" className='text-[#A259FF] ml-3 shadow-for-text'>Sing up</Link>
                 </div>
 
                 {/* auth GitHub */}
