@@ -1,6 +1,6 @@
 "use client";
 import AnimatedNumb from "@/components/common/AnimatedNumb";
-import MyButton from "@/components/common/MyButton";
+import MyLink from "@/components/common/MyLink";
 import { countNumbData } from "../data";
 import BannerCard from "../components/BannerCard";
 import { useEffect, useState } from "react";
@@ -40,7 +40,7 @@ const Banner = () => {
           cardVisible && <BannerCard />
         }
         <div className="w-full h-[60px] mx-auto md:w-[223px] md:mx-0">
-          <MyButton
+          <MyLink
             href="/marketplace"
             iconSrc="/images/icons/RocketLaunch.webp"
             alt="Rocket"

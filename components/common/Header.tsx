@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import MyButton from "./MyButton";
+import MyLink from "./MyLink";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -68,12 +68,12 @@ const Header = () => {
           Connect a wallet
         </Link>
         <div className="h-[60px] w-[152px]">
-          <MyButton
-            href="/authentication"
+          <MyLink
+            href="/auth"
             onClick={handleButton}
             iconSrc={"/images/icons/User.webp"}
             alt={"icon"}
-            text={"Sign Up"}
+            text={"Log in"}
             bg={"#A259FF"}
           />
         </div>

@@ -1,7 +1,6 @@
-import Link from "next/link"
 import InfoCard from "../components/InfoCard"
 import Image from "next/image"
-import MyButton from "@/components/common/MyButton"
+import MyLink from "@/components/common/MyLink"
 import { infoSectionData } from "../data"
 
 const Info = () => {
@@ -42,7 +41,7 @@ const Info = () => {
                             className="w-full h-[46px] xl:h-[60px] rounded-[20px] px-5 placeholder:text-black"
                         />
                         <div className="w-[100%] h-[46px] mt-5 xl:mt-0 xl:absolute xl:top-0 xl:right-0 xl:w-[178px] xl:h-[60px]">
-                            <MyButton
+                            <MyLink
                                 href=''
                                 iconSrc="/images/icons/EnvelopeSimple.webp"
                                 alt='join us icon'

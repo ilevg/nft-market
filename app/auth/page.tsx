@@ -1,11 +1,29 @@
 "use client"
-import MyButton from '@/components/common/MyButton'
 import Image from 'next/image'
-import React from 'react'
-import { signIn } from 'next-auth/react'  // Импортируем хук signIn
+import React, { useState } from 'react'
+import { signIn } from 'next-auth/react'
 import Link from 'next/link'
+import MyButton from '@/components/common/MyButton'
 
 const Page = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        const result = await signIn("credential", {
+            redirect: false,
+            email,
+            password,
+        })
+
+        if (result?.error) {
+            console.error(result.error)
+        } else {
+            window.location.href = '/auth/profile'
+        }
+    }
+
     return (
         <div className='mx-5 md:mx-0 md:pr-20 mb-10 md:grid md:grid-cols-2 md:gap-10 items-center'>
             <Image
@@ -34,12 +52,29 @@ const Page = () => {
                 <h2 className='text-subtitle'>Log in</h2>
                 <span>Welcome! Enter your details and start creating, collecting, and selling NFTs.</span>
 
-                <form action="" className='flex flex-col gap-[15px]'>
-                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="email" name="email" id="email" placeholder='Email Address' />
-                    <input className='h-[45px] rounded-full pl-12 placeholder:text-black' type="password" name="pass" id="pass" placeholder='Password' />
+                <form onSubmit={handleSubmit} className='flex flex-col gap-[15px] text-black'>
+                    <input
+                        className='h-[45px] rounded-full pl-12 placeholder:text-black'
+                        type="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        id="email"
+                        placeholder='Email Address'
+                        required
+                    />
+                    <input
+                        className='h-[45px] rounded-full pl-12 placeholder:text-black'
+                        type="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        id="pass"
+                        placeholder='Password'
+                        required
+                    />
                     <div className="w-full h-[45px] mx-auto md:mx-0">
                         <MyButton
-                            href="/marketplace"
                             text="Log in"
                             bg="#A259FF"
                             color="#FFFFFF"
@@ -52,7 +87,7 @@ const Page = () => {
                     <Link href="http://localhost:3000/auth/register" className='text-[#A259FF] ml-3 shadow-for-text'>Sing up</Link>
                 </div>
 
-                {/* Добавляем кнопку для входа через GitHub */}
+                {/* auth GitHub */}
                 {/* <div className='flex flex-col gap-[15px]'>
                     <span>Or sign up with</span>
                     <button

@@ -3,7 +3,7 @@ import AnimatedNumb from "@/components/common/AnimatedNumb"
 import NftCard from "@/components/common/NftCard"
 import Image from "next/image"
 import React, { useState } from "react"
-import MyButton from "@/components/common/MyButton"
+import MyLink from "@/components/common/MyLink"
 import { countNumbData } from "@/app/home/data"
 import { useFetchData } from "@/hooks/useFetchData"
 import Pagination from "@/components/common/Pagination"
@@ -36,7 +36,7 @@ const Page = ({ params }: { params: { collection: string; id: number } }) => {
           <div className="flex justify-between items-center">
             <h2 className="text-subtitleSec md:text-subtitle">{collection}</h2>
             <div className="h-[60px] w-[200px]">
-              <MyButton
+              <MyLink
                 href="/marketplace"
                 iconSrc="/images/icons/User.webp"
                 alt="Eye"

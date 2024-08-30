@@ -1,6 +1,5 @@
-import MyButton from '@/components/common/MyButton'
+import MyLink from '@/components/common/MyLink'
 import Image from 'next/image'
-import React from 'react'
 
 const page = () => {
     return (
@@ -32,7 +31,7 @@ const page = () => {
                 <span>Choose a wallet you want to connect. There are several wallet providers. </span>
                 <form action="" className='flex flex-col gap-[15px] text-textBig'>
                     <div className="w-full h-[60px] xl:h-[72px] mx-auto md:mx-0 border-[2px] rounded-[20px] border-purple-500">
-                        <MyButton
+                        <MyLink
                             href="https://metamask.io/"
                             text="Metamask"
                             iconSrc={"/images/icons/Metamask.webp"}
@@ -42,7 +41,7 @@ const page = () => {
                         />
                     </div>
                     <div className="w-full h-[60px] xl:h-[72px] mx-auto md:mx-0 border-[2px] rounded-[20px] border-purple-500">
-                        <MyButton
+                        <MyLink
                             href="https://walletconnect.com/"
                             text="Wallet Connect"
                             iconSrc={"/images/icons/WalletConnect.webp"}
@@ -52,7 +51,7 @@ const page = () => {
                         />
                     </div>
                     <div className="w-full h-[60px] xl:h-[72px] mx-auto md:mx-0 border-[2px] rounded-[20px] border-purple-500">
-                        <MyButton
+                        <MyLink
                             href="https://www.coinbase.com/"
                             text="Coinbase"
                             iconSrc={"/images/icons/Coinbase.webp"}

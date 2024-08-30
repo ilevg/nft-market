@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import MyButton from "./MyButton";
+import MyLink from "./MyLink";
 
 const Footer = () => {
   return (
@@ -83,7 +83,7 @@ const Footer = () => {
               className="w-full h-[46px] md:h-[60px] rounded-[20px] px-5 placeholder:text-black"
             />
             <div className="w-[100%] h-[46px] mt-5 md:mt-0 md:absolute md:top-0 md:right-0 md:w-[178px] md:h-[60px]">
-              <MyButton
+              <MyLink
                 href=''
                 text={'Subscribe'}
                 bg={'#A259FF'}

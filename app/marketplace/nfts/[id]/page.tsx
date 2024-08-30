@@ -1,7 +1,7 @@
 "use client"
 import NftCard from "@/components/common/NftCard"
 import React from "react"
-import MyButton from "@/components/common/MyButton"
+import MyLink from "@/components/common/MyLink"
 import Timer from "@/components/common/Timer"
 import Image from "next/image"
 import { useFetchData } from "@/hooks/useFetchData"
@@ -36,7 +36,7 @@ const Page = ({ params }: { params: { id: number } }) => {
             <div className="flex flex-col  justify-center bg-neutral-700 bg-opacity-90 w-full md:w-[295px] h-[245px] rounded-2xl">
               <Timer hoursToEnd={22} />
               <div className="m-auto items-center h-[60px] w-full px-[30px] mb-[30px]">
-                <MyButton
+                <MyLink
                   href="/marketplace"
                   iconSrc="/images/icons/Copy.webp"
                   alt="Eye"
@@ -121,7 +121,7 @@ const Page = ({ params }: { params: { id: number } }) => {
             }
           </div>
           <div className="h-[60px] w-[100%] mt-10 md:-mt-2 md:w-[244px] md:absolute top-0 right-0 border border-purple-500 rounded-[20px]">
-            <MyButton
+            <MyLink
               href="/marketplace"
               iconSrc="/images/icons/Eye-blue.png"
               alt="rocket icon"

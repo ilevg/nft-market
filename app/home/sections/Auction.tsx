@@ -1,4 +1,4 @@
-import MyButton from "@/components/common/MyButton"
+import MyLink from "@/components/common/MyLink"
 import Image from "next/image"
 import Timer from "../../../components/common/Timer"
 
@@ -29,7 +29,7 @@ const Auction = () => {
                     </div>
 
                     <div className="h-[60px] w-full md:w-[200px]">
-                        <MyButton
+                        <MyLink
                             href="/marketplace/nfts/28"
                             iconSrc="/images/icons/Eye-blue.png"
                             alt="Eye"

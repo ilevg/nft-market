@@ -1,12 +1,32 @@
-import React from 'react'
+// app/auth/profile/page.tsx
+'use client';
 
-const Page = () => {
+import { useSession } from 'next-auth/react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation'; // Обновленный импорт
+
+export default function ProfilePage() {
+    const { data: session, status } = useSession();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (status === 'unauthenticated') {
+            router.push('/auth/profile');
+        }
+    }, [status, router]);
+
+    if (status === 'loading') {
+        return <p>Loading...</p>;
+    }
+
+    if (!session) {
+        return <p>Waaaaaait, whaaatt!</p>;
+    }
+
     return (
-        <div className='mx-auto my-52 w-fit text-white'>
-            <span className='text-[#A259FF] text-textBig'>name</span>
-            , You are Welcome!
+        <div>
+            <h1>Welcome, {session.user?.name}</h1>
+            <p>Email: {session.user?.email}</p>
         </div>
-    )
+    );
 }
-
-export default Page

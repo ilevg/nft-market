@@ -1,5 +1,5 @@
 "use client"
-import MyButton from "@/components/common/MyButton"
+import MyLink from "@/components/common/MyLink"
 import CreatorCard from "../components/CreatorCard"
 import { useFetchData } from "@/hooks/useFetchData"
 
@@ -27,7 +27,7 @@ const Creators = () => {
                 }
             </div>
             <div className="h-[60px] w-[100%] mt-10 md:mt-0 md:w-[244px] md:absolute top-5 right-0 border border-purple-500 rounded-[20px]">
-                <MyButton
+                <MyLink
                     href='/rankings'
                     iconSrc='/images/icons/RocketLaunch.webp'
                     alt='rocket icon'

@@ -5,7 +5,7 @@ import NftCard from "@/components/common/NftCard"
 import Image from "next/image"
 import React, { useState } from "react"
 import { countNumbData } from "../../home/data"
-import MyButton from "@/components/common/MyButton"
+import MyLink from "@/components/common/MyLink"
 import Link from "next/link"
 import { useFetchData } from "@/hooks/useFetchData"
 import { useCollections } from "@/context"
@@ -44,7 +44,7 @@ const Page = ({ params }: { params: { id: number } }) => {
           <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center gap-5">
             <h2 className="text-subtitleSec md:text-subtitle">{singleAuthor?.name}</h2>
             <div className="h-[60px] w-full md:w-[200px]">
-              <MyButton
+              <MyLink
                 href="/"
                 iconSrc="/images/icons/Copy.webp"
                 alt="Eye"

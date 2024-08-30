@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+
 interface ButtonProps {
+  href: string
   onClick?: () => void | null
   iconSrc?: string
   alt?: string
@@ -8,7 +11,8 @@ interface ButtonProps {
   color?: string
 }
 
-const MyButton: React.FC<ButtonProps> = ({
+const MyLink: React.FC<ButtonProps> = ({
+  href,
   onClick,
   iconSrc,
   alt,
@@ -17,8 +21,9 @@ const MyButton: React.FC<ButtonProps> = ({
   color
 }) => {
   return (
-    <button
-      type="submit"
+    <Link
+      href={href}
+      type="button"
       onClick={onClick}
       style={{
         width: '100%',
@@ -38,8 +43,8 @@ const MyButton: React.FC<ButtonProps> = ({
         />
       )}
       {text}
-    </button>
-  )
-}
+    </Link>
+  );
+};
 
-export default MyButton
+export default MyLink;
