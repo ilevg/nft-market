@@ -48,7 +48,7 @@ const Page = () => {
   }
 
   return (
-    <div className="text-white w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px mx-auto px-5 md:px-0 bg-bg">
+    <div className="text-white w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px] mx-auto px-5 md:px-0 bg-bg">
       <div className="py-10 md:py-[60px] xl:py-20">
         <h2 className="text-subtitleSec md:text-subtitle">Browse Marketplace</h2>
         <span className="flex mt-[10px] mb-[20px]">Browse through more than 50k NFTs on the NFT Marketplace.</span>

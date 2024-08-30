@@ -33,7 +33,7 @@ const Page = () => {
   const sortedAuthors = useMemo(() => sortAuthors(activeTab), [authors, activeTab, sortAuthors]);
 
   return (
-    <div className=" text-white w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px mx-auto mb-10 px-5 md:px-0 bg-bg">
+    <div className=" text-white w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px] mx-auto mb-10 px-5 md:px-0 bg-bg">
       <div className="py-10 md:py-[60px] xl:py-20" >
         <h2 className="text-subtitleSec md:text-subtitle">Top Creators</h2>
         <span className="flex mt-[10px] mb-[20px]">Check out top ranking NFT artists on the NFT Marketplace.</span>
