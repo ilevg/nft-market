@@ -1,4 +1,3 @@
-// app/auth/profile/page.tsx
 import React from 'react';
 
 const Page: React.FC = () => {
@@ -7,10 +6,10 @@ const Page: React.FC = () => {
             <div className="text-center mb-8">
                 <h1 className="text-4xl font-extrabold text-gray-900 mb-4">Welcome to the World of NFTs</h1>
                 <span>
-                    "Discover unique digital assets with NFT technology.",
-                    "Participate in exclusive collections and events.",
-                    "Earn rewards and bonuses through active engagement.",
-                    "Uncover a new realm of digital ownership and creativity."
+                    &quot;Discover unique digital assets with NFT technology.&quot;,<br />
+                    &quot;Participate in exclusive collections and events.&quot;,<br />
+                    &quot;Earn rewards and bonuses through active engagement.&quot;,<br />
+                    &quot;Uncover a new realm of digital ownership and creativity.&quot;
                 </span>
             </div>
             <div className="max-w-3xl w-full text-center mt-12">
