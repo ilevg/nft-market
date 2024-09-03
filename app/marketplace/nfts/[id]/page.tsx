@@ -33,7 +33,7 @@ const Page = ({ params }: { params: { id: number } }) => {
         <div className=" flex flex-col gap-10 py-[30px] xl:pt-10 xl:pb-20">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
             <div>
-              <h2 className="text-subtitle md:text-headerSec mb-3">{bannerImg}</h2>
+              <h2 className="text-subtitle md:text-headerSec mb-3">{singleNfts?.name}</h2>
               <span className="text-zinc-500">Minted on {formatedMutedDate && formatedMutedDate}</span>
             </div>
             <div className="flex flex-col  justify-center bg-neutral-700 bg-opacity-90 w-full md:w-[295px] h-[245px] rounded-2xl">
