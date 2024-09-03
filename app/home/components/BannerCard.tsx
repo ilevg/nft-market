@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const BannerCard = () => {
     return (
-        <Link href={'/marketplace/nft/30'} className="md:w-[50%] block shadow-for-box rounded-[20px]">
+        <Link href={'/marketplace/nfts/30'} className="md:w-[50%] block shadow-for-box rounded-[20px]">
             <Image
                 src="/images/main-page-img/banner-img.png"
                 alt="Storefront"
