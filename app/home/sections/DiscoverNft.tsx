@@ -36,7 +36,7 @@ const DiscoverNft = () => {
             </div>
             <div className="h-[60px] w-[100%] mt-10 md:mt-0 md:w-[244px] md:absolute top-5 right-0 border border-purple-500 rounded-[20px]">
                 <MyLink
-                    href='/rankings'
+                    href='/marketplace'
                     iconSrc='/images/icons/Eye-blue.png'
                     alt='rocket icon'
                     text='See All'

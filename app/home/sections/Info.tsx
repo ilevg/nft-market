@@ -38,7 +38,7 @@ const Info = () => {
                         <input
                             type="text"
                             placeholder="Enter Your Email Address"
-                            className="w-full h-[46px] xl:h-[60px] rounded-[20px] px-5 placeholder:text-black"
+                            className="w-full h-[46px] xl:h-[60px] rounded-[20px] px-5 placeholder:text-black text-black"
                         />
                         <div className="w-[100%] h-[46px] mt-5 xl:mt-0 xl:absolute xl:top-0 xl:right-0 xl:w-[178px] xl:h-[60px]">
                             <MyLink
