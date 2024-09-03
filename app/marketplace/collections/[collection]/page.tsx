@@ -10,7 +10,7 @@ import Pagination from "@/components/common/Pagination"
 
 const Page = ({ params }: { params: { collection: string; id: number } }) => {
   const [currentPage, setCurrentPage] = useState(1)
-  const { collection } = params;
+  const collection = decodeURIComponent(params.collection);
   const { nfts } = useFetchData({ endpoint: '/api/nfts' })
   const collections = nfts.filter(nft => nft.collection === collection)
   const author = collections[0]?.author

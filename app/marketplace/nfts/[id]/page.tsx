@@ -13,6 +13,7 @@ const Page = ({ params }: { params: { id: number } }) => {
   const { singleNfts } = useFetchData({ endpoint: `/api/nfts/${id}` })
   const { nfts } = useFetchData({ endpoint: `/api/nfts` })
 
+  console.log(singleNfts)
   const mutedDate = singleNfts?.date ? new Date(singleNfts.date) : new Date()
 
   const formatedMutedDate = mutedDate.toLocaleDateString('en-Us', {
@@ -21,16 +22,18 @@ const Page = ({ params }: { params: { id: number } }) => {
     year: 'numeric'
   });
 
-  (singleNfts)
-
+  const bannerImg = singleNfts?.main_img
+  console.log(bannerImg)
   return (
     <div>
-      <div className="w-full h-[320px] md:h-[420px] xl:h-[560px] bg-[url('/images/nft-page.png')] bg-cover bg-top"></div>
+      <div
+        style={{ backgroundImage: `url('/images/nft-card-img/${bannerImg}')` }}
+        className="w-full h-[320px] md:h-[420px] xl:h-[560px]"></div>
       <div className=" text-white w-[100%] md:w-[690px] xl:w-[1050px] xxl:w-[1450px mx-auto px-5 md:px-0">
         <div className=" flex flex-col gap-10 py-[30px] xl:pt-10 xl:pb-20">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-5">
             <div>
-              <h2 className="text-subtitle md:text-headerSec mb-3">{singleNfts?.name}</h2>
+              <h2 className="text-subtitle md:text-headerSec mb-3">{bannerImg}</h2>
               <span className="text-zinc-500">Minted on {formatedMutedDate && formatedMutedDate}</span>
             </div>
             <div className="flex flex-col  justify-center bg-neutral-700 bg-opacity-90 w-full md:w-[295px] h-[245px] rounded-2xl">
