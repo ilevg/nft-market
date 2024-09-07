@@ -1,4 +1,3 @@
-// app/auth/register/page.tsx
 'use client';
 
 import Image from 'next/image';
@@ -10,6 +9,7 @@ const Page = () => {
     const [password, setPassword] = useState('');
     const [passwordRepeat, setPasswordRepeat] = useState('');
     const [name, setName] = useState('');
+    const [error, setError] = useState(false)
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -32,6 +32,7 @@ const Page = () => {
         if (response.ok) {
             window.location.href = "/auth";
         } else {
+            setError(data.error)
             console.error(data.error || 'Registration failed');
         }
     };
@@ -113,6 +114,11 @@ const Page = () => {
                             color="#FFFFFF"
                         />
                     </div>
+                    <span className='text-center text-red-500'>
+                        {
+                            error && 'Registration failed'
+                        }
+                    </span>
                 </form>
             </div>
         </div>

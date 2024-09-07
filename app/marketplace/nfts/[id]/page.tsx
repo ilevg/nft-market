@@ -13,7 +13,6 @@ const Page = ({ params }: { params: { id: number } }) => {
   const { singleNfts } = useFetchData({ endpoint: `/api/nfts/${id}` })
   const { nfts } = useFetchData({ endpoint: `/api/nfts` })
 
-  console.log(singleNfts)
   const mutedDate = singleNfts?.date ? new Date(singleNfts.date) : new Date()
 
   const formatedMutedDate = mutedDate.toLocaleDateString('en-Us', {
@@ -23,7 +22,6 @@ const Page = ({ params }: { params: { id: number } }) => {
   });
 
   const bannerImg = singleNfts?.main_img
-  console.log(bannerImg)
   return (
     <div>
       <div
